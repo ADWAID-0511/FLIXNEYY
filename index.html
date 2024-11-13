@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommendation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #141414;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #3456ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ff3f34;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #34ffe7;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    nav ul li a.home-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 5px 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #ff3f34;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .search-bar button img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero {
+      font-weight: bold;
+      background-image: url(incept.webp);
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 2px;
+    }
+
+    .hero h1 {
+      color: #ff3f34;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #ff3f34;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .movies {
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ff3f34;
+      text-align: center;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .movie-card {
+      background-color: #222;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .movie-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .movie-card p {
+      font-size: 16px;
+      color: #aaa;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #000;
+    }
+
+    footer a {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Flixney</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="home-icon" alt="Home"> Home</a></li>
+        <li><a href="action.html">Action</a></li>
+        <li><a href="drama.html">Drama</a></li>
+        <li><a href="scifi.html">Sci-Fi</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search movies..." id="search-input">
+      <button type="button" id="search-button">
+        <img src="search icon in red color.png" alt="Search">
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Featured Movie: Inception</h1>
+      <p>A mind-bending thriller that will leave you questioning reality.</p>
+      <a href="https://www.netflix.com/in/title/70131314" class="btn">Watch Now</a>
+    </div>
+  </section>
+
+  <section class="movies">
+    <h2 class="section-title">Top Picks for You</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="shaw.webp" alt="The Shawshank Redemption">
+        <h3>The Shawshank Redemption</h3>
+      </div>
+      <div class="movie-card">
+        <img src="the god.webp" alt="The Godfather">
+        <h3>The Godfather</h3>
+      </div>
+      <div class="movie-card">
+        <img src="kgf 2.jpg" alt="KGF-Chapter-2">
+        <h3>KGF-Chapter-2</h3>
+      </div>
+      <div class="movie-card">
+        <img src="deadpool-and-wolverine-3-teaser-poster.webp" alt="Deadpool and Wolverine">
+        <h3>Deadpool and Wolverine</h3>
+      </div>
+    </div>
+
+    <h2 class="section-title">Trending Now</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="manjummeel boiss.jpg" alt="Manjummel Boys">
+        <h3>Manjummel Boys</h3>
+      </div>
+      <div class="movie-card">
+        <img src="the goat life.jpg" alt="Aadujeevitham: The Goat Life">
+        <h3>Aadujeevitham: The Goat Life</h3>
+      </div>
+      <div class="movie-card">
+        <img src="wild_robot_ver5.webp" alt="The Wild Robot">
+        <h3>The Wild Robot</h3>
+      </div>
+      <div class="movie-card">
+        <img src="shershaah.jpg" alt="Shershaah">
+        <h3>Shershaah</h3>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2024 Flixney. All rights reserved.</p>
+    <p>Follow us on <a href="https://www.facebook.com/">Facebook</a> | <a href="https://x.com/">Twitter</a> | <a href="https://www.instagram.com/">Instagram</a></p>
+  </footer>
+
+</body>
+</html>
